@@ -924,6 +924,10 @@ address {
   .footer-subscribe-wrap {
     margin-left: auto;
   }
+
+  .footer-input {
+    opacity: 1;
+  }
 }
 
 /* modal */
