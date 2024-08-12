@@ -17,6 +17,7 @@ p {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul,
@@ -244,7 +245,7 @@ address {
 
 .mob-menu-container {
   position: relative;
-  padding: 72px 16px 40px;
+  padding: 72px 24px 40px 16px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -461,7 +462,7 @@ address {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero-bg-desc.jpg);
+      url(../images/hero-bg-desk.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -474,7 +475,7 @@ address {
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero-bg-desc-2x.jpg);
+        url(../images/hero-bg-desk-2x.jpg);
     }
   }
 
@@ -757,11 +758,14 @@ address {
   gap: 72px;
 }
 
-.footer-about-wrap {
+.footer-about-wrap,
+.footer-social-wrap,
+.footer-subscribe-wrap {
   margin: 0 auto;
 }
 
-.footer-logo {
+.footer-logo,
+.footer-text-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -779,19 +783,11 @@ address {
   max-width: 288px;
 }
 
-.footer-social-wrap {
-  margin: 0 auto;
-}
-
 .footer-text-title {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 16px;
 }
 
 .footer-social-list {
@@ -805,10 +801,6 @@ address {
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: #31d0aa;
-}
-
-.footer-subscribe-wrap {
-  margin: 0 auto;
 }
 
 .footer-input {
@@ -868,28 +860,20 @@ address {
     padding: 0 108px;
   }
 
-  .footer-about-wrap {
+  .footer-about-wrap,
+  .footer-social-wrap,
+  .footer-subscribe-wrap,
+  .footer-form-btn {
     margin: 0;
   }
 
-  .footer-logo {
+  .footer-logo,
+  .footer-text-title {
     display: block;
   }
 
   .footer-about-text {
     max-width: 264px;
-  }
-
-  .footer-social-wrap {
-    margin: 0;
-  }
-
-  .footer-text-title {
-    display: block;
-  }
-
-  .footer-subscribe-wrap {
-    margin: 0;
   }
 
   .footer-form {
@@ -899,10 +883,6 @@ address {
 
   .footer-input {
     width: 264px;
-  }
-
-  .footer-form-btn {
-    margin: 0;
   }
 }
 
@@ -926,6 +906,10 @@ address {
   }
 
   .footer-input {
+    opacity: 1;
+  }
+
+  .footer-input::placeholder {
     opacity: 1;
   }
 }
