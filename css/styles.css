@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -17,7 +22,7 @@ p {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: currentColor;
 }
 
 ul,
@@ -35,6 +40,12 @@ img {
 
 button {
   cursor: pointer;
+  font-family: inherit;
+  color: currentColor;
+}
+
+input {
+  font-family: inherit;
 }
 
 address {
@@ -56,6 +67,7 @@ address {
 
 .container {
   max-width: 320px;
+  width: 100%;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -358,15 +370,13 @@ address {
 /* hero */
 
 .hero {
-  max-width: 320px;
+  width: 100%;
   padding: 72px 0;
   margin: 0 auto;
   background-color: #2e2f42;
-  background-image: linear-gradient(
-      to bottom,
+  background-image: linear-gradient(to bottom,
       rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+      rgba(46, 47, 66, 0.7)),
     url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -374,15 +384,13 @@ address {
 }
 
 @media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(
-        to bottom,
+    background-image: linear-gradient(to bottom,
         rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
+        rgba(46, 47, 66, 0.7)),
       url(../images/hero-bg-mob-2x.jpg);
   }
 }
@@ -421,26 +429,21 @@ address {
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     padding: 112px 0;
-    background-image: linear-gradient(
-        to bottom,
+    background-image: linear-gradient(to bottom,
         rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
+        rgba(46, 47, 66, 0.7)),
       url(../images/hero-bg-tab.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
     .hero {
-      background-image: linear-gradient(
-          to bottom,
+      background-image: linear-gradient(to bottom,
           rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
+          rgba(46, 47, 66, 0.7)),
         url(../images/hero-bg-tab-2x.jpg);
     }
   }
@@ -455,26 +458,21 @@ address {
 
 @media screen and (min-width: 1158px) {
   .hero {
-    max-width: 1440px;
     padding: 188px 0;
-    background-image: linear-gradient(
-        to bottom,
+    background-image: linear-gradient(to bottom,
         rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
+        rgba(46, 47, 66, 0.7)),
       url(../images/hero-bg-desk.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
     .hero {
-      background-image: linear-gradient(
-          to bottom,
+      background-image: linear-gradient(to bottom,
           rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
+          rgba(46, 47, 66, 0.7)),
         url(../images/hero-bg-desk-2x.jpg);
     }
   }
@@ -1024,7 +1022,7 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus-within + .modal-icon {
+.modal-input:focus-within+.modal-icon {
   fill: #4d5ae5;
 }
 
@@ -1087,7 +1085,7 @@ address {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-checkbox-input:checked + .modal-checkbox-label .modal-checkbox {
+.modal-checkbox-input:checked+.modal-checkbox-label .modal-checkbox {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;

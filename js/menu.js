@@ -1,10 +1,7 @@
 (() => {
   const refs = {
-    // Додати атрибут data-menu-open на кнопку відкриття
     openModalBtn: document.querySelector("[data-menu-open]"),
-    // Додати атрибут data-menu-close на кнопку закриття
     closeModalBtn: document.querySelector("[data-menu-close]"),
-    // Додати атрибут data-menu на бекдроп меню
     modal: document.querySelector("[data-menu]"),
   };
 
@@ -12,7 +9,15 @@
   refs.closeModalBtn.addEventListener("click", toggleModal);
 
   function toggleModal() {
-    // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
-    refs.modal.classList.toggle("is-open");
+    const isOpen = refs.modal.classList.toggle("is-open");
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   }
+
+  const menuLinks = refs.modal.querySelectorAll('a[href*="#"]');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      refs.modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    });
+  });
 })();
